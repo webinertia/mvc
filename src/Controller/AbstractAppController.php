@@ -7,7 +7,7 @@ namespace Webinertia\Mvc\Controller;
 use Webinertia\Mvc\Controller\ControllerInterface;
 use Webinertia\Mvc\Controller\Trait\AjaxActionTrait;
 use Webinertia\Mvc\Controller\Trait\QueryParamsTrait;
-use Webinertia\Mvc\Session\SessionContainerAwareTrait;
+use Webinertia\Session\SessionContainerAwareTrait;
 use Laminas\Form\FormElementManager;
 use Laminas\Http\PhpEnvironment\Response;
 use Laminas\Http\PhpEnvironment\Request;
@@ -15,9 +15,9 @@ use Laminas\I18n\Translator\TranslatorAwareTrait;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\Mvc\MvcEvent;
 use Laminas\View\Model\ViewModel;
-use Webinertia\User\Acl\AclAwareTrait;
-use Webienrtia\User\Acl\CheckActionAccessTrait;
-use Webinertia\User\Acl\ResourceAwareTrait;
+use Webinertia\Acl\AclAwareTrait;
+use Webinertia\Acl\CheckActionAccessTrait;
+use Webinertia\Acl\ResourceAwareTrait;
 use Webinertia\User\Service\UserServiceAwareTrait;
 
 abstract class AbstractAppController extends AbstractActionController implements ControllerInterface
@@ -30,7 +30,6 @@ abstract class AbstractAppController extends AbstractActionController implements
     use ResourceAwareTrait;
     use SessionContainerAwareTrait;
     use TranslatorAwareTrait;
-    use UserServiceAwareTrait;
     use QueryParamsTrait;
 
     /** @var Request $request */
