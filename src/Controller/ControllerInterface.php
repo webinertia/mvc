@@ -7,7 +7,7 @@ namespace Webinertia\Mvc\Controller;
 use Laminas\I18n\Translator\TranslatorAwareInterface;
 use Laminas\Permissions\Acl\Resource\ResourceInterface;
 use Webinertia\Log\LoggerAwareInterface;
-use Webinertia\Upload\UploadAwareInterface;
+use Webinertia\Uploader\UploaderAwareInterface;
 use Webinertia\Acl\AclAwareInterface;
 //use Webinertia\User\Service\UserServiceAwareInterface;
 use Webinertia\Session\SessionContainerAwareInterface;
@@ -17,8 +17,8 @@ interface ControllerInterface extends
     TranslatorAwareInterface,
     LoggerAwareInterface,
     ResourceInterface,
-    SessionContainerAwareInterface
-    //UploadAwareInterface,
+    SessionContainerAwareInterface,
+    UploaderAwareInterface
     //UserServiceAwareInterface
 {
 }

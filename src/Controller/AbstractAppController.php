@@ -43,7 +43,7 @@ abstract class AbstractAppController extends AbstractActionController implements
     /** @var ViewModel $view */
     protected $view;
     /** @var FormElementManager $formElementManager */
-    protected $formElementManager;
+    protected $formManager;
 
     /**
      * @return void

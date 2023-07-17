@@ -8,8 +8,8 @@ use Laminas\Form\FormElementManager;
 
 trait FormManagerAwareTrait
 {
-    /** @var FormElementManager */
-    protected $formManager;
+    // /** @var FormElementManager */
+    // protected $formManager;
     public function setFormManager(FormElementManager $formManager): void
     {
         $this->formManager = $formManager;
